@@ -1,21 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import React,{ useState, useEffect } from 'react'
-import getGifs from './services/getGifs';
-import ListOfGifs from './components/ListOfGifs';
-import { Route, Link } from 'wouter'
+import './App.css'
+import ListOfGifs from './components/ListOfGifs'
+import { Route } from 'wouter'
 
-
-
-function App() {
+function App () {
   return (
-    <div className="App">
-      <section className="App-contest">
+    <div className='App'>
+      <section className='App-contest'>
         <h1>App</h1>
-        <Route component={ListOfGifs} path='/gif/:keyboard'></Route>
+        <Route component={ListOfGifs} path='/gif/:keyboard' />
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
