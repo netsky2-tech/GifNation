@@ -1,5 +1,5 @@
 import React from 'react'
-import './Gif.css'
+import './../Gif/Gif.css'
 export default function GIF ({ title, id, url }) {
   return (
 

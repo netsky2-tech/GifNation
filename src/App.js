@@ -1,16 +1,18 @@
 import './App.css'
-import ListOfGifs from './components/ListOfGifs'
-import { Route } from 'wouter'
+import ListOfGifs from './components/ListOfGifs/ListOfGifs'
+import { Route, Link } from 'wouter'
+import logo from './logo-transparent.png'
 
 function App () {
   return (
     <div className='App'>
-      <section className='App-contest'>
-        <h1>App</h1>
+      <section className='App-content'>
+        <Link to='/'>
+          <img className='App-logo' alt='logo GifNation' src={logo} />
+        </Link>
         <Route component={ListOfGifs} path='/gif/:keyboard' />
       </section>
     </div>
   )
 }
-
 export default App
