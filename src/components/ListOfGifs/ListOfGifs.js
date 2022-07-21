@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GIF from '../Gif/Gif'
 import getGifs from '../../services/getGifs'
 import './../ListOfGifs/ListOfGifs.css'
+import Spinner from './../Spinner'
 
 export default function ListOfGifs ({ params }) {
   const { keyboard } = params
@@ -17,7 +18,7 @@ export default function ListOfGifs ({ params }) {
     })
   }, [keyboard])
 
-  if (loading) return <i>Cargando</i>
+  if (loading) return <Spinner />
 
   return (
     <div className='ListOfGifs'>
